@@ -2,6 +2,33 @@
 //https://www.scaler.com/academy/mentee-dashboard/class/243360/assignment/problems/63289
 
 //Code:
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+
+<body>
+    <script defer>
+        function fetchByPromise(fileName) {
+            return new Promise(function (resolve, reject) {
+                setTimeout(function () {
+                    resolve(`content : ${fileName}`);
+                }, 100 * Math.random());
+            });
+        }
+    </script>
+    <!-- Write your code solution here, inside the twoSeries function -->
+<!-- WARNING:
+        Don't make any changes outside the given function. (would fail test cases)
+        Write the required code and return the correct answer. -->
+    <script id='solution' defer>
 async function twoSeries(file1, file2, ansArray) {
     //write your code here =========================================
     let dataFile = await fetchByPromise(file1);
@@ -13,3 +40,8 @@ async function twoSeries(file1, file2, ansArray) {
     ansArray.push('All files have been read');
     return ansArray
 }
+
+</script>
+</body>
+
+</html>
