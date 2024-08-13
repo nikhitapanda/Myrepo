@@ -1,0 +1,15 @@
+//Question link, Q1. JS Lecture 9: H1 - Two Files in Series using await
+//https://www.scaler.com/academy/mentee-dashboard/class/243360/assignment/problems/63289
+
+//Code:
+async function twoSeries(file1, file2, ansArray) {
+    //write your code here =========================================
+    let dataFile = await fetchByPromise(file1);
+    ansArray.push(dataFile);
+
+    dataFile = await fetchByPromise(file2);
+    ansArray.push(dataFile);
+
+    ansArray.push('All files have been read');
+    return ansArray
+}
